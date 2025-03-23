@@ -11,6 +11,31 @@
  * Usage: node app/scripts/find-hardcoded-colors.js
  */
 
+if (process.argv.includes('--help')) {
+  console.log(`
+Usage:
+  find-hardcoded-colors [directory]
+
+Options:
+  --help                 Show this help message
+  --version              Show package version
+  --format=<format>      Output format (text or json, default: text)
+  --output=<file>        Output file path (default: color-report.txt or color-report.json)
+  --exclude=<dirs>       Comma-separated list of directories to exclude
+
+Example:
+  find-hardcoded-colors ./app
+  find-hardcoded-colors ./app --format=json --output=colors.json
+  find-hardcoded-colors ./src --exclude=assets,dist,tests
+  `);
+  process.exit(0);
+}
+
+if (process.argv.includes('--version')) {
+  console.log('find-hardcoded-colors v1.0.1'); // or dynamically read package.json
+  process.exit(0);
+}
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -177,6 +202,14 @@ const COLOR_NAMES = [
   'yellowgreen',
 ];
 
+// Pattern to find colors inside string values (like border: '1px solid red')
+const STRING_WITH_COLOR_PATTERN = new RegExp(
+  `['"]([^'"]*?(${COLOR_NAMES.join(
+    '|'
+  )}|#[0-9A-Fa-f]{3,8}|rgb\\([^)]+\\)|rgba\\([^)]+\\)|hsl\\([^)]+\\)|hsla\\([^)]+\\))[^'"]*?)['"]`,
+  'gi'
+);
+
 // Create a named color pattern - making sure it matches only property: 'color' pairs
 // and not inside strings or other contexts
 const NAMED_COLOR_PATTERN = new RegExp(
@@ -191,7 +224,7 @@ const QUOTED_COLOR_PATTERN = new RegExp(
 );
 
 // Directories to exclude
-const EXCLUDE_DIRS = [
+const DEFAULT_EXCLUDE_DIRS = [
   'node_modules',
   '.git',
   'build',
@@ -228,14 +261,14 @@ function isTextFile(filePath) {
 /**
  * Check if we should skip this file
  */
-function shouldSkipFile(filePath) {
+function shouldSkipFile(filePath, excludeDirs) {
   // Skip theme color files
   if (THEME_COLOR_DIRS.some((dir) => filePath.includes(dir))) {
     return true;
   }
 
   // Skip directories we don't want to search
-  if (EXCLUDE_DIRS.some((dir) => filePath.includes(`/${dir}/`))) {
+  if (excludeDirs.some((dir) => filePath.includes(`/${dir}/`))) {
     return true;
   }
 
@@ -245,8 +278,8 @@ function shouldSkipFile(filePath) {
 /**
  * Process a file to find color usages
  */
-function processFile(filePath) {
-  if (shouldSkipFile(filePath) || !isTextFile(filePath)) {
+function processFile(filePath, excludeDirs) {
+  if (shouldSkipFile(filePath, excludeDirs) || !isTextFile(filePath)) {
     return;
   }
 
@@ -327,6 +360,23 @@ function processFile(filePath) {
         });
       });
 
+      // Find colors inside string values like border: '1px solid red'
+      const stringWithColorMatches = [
+        ...(line.matchAll(STRING_WITH_COLOR_PATTERN) || []),
+      ];
+      stringWithColorMatches.forEach((match) => {
+        // Skip if this is already covered by other patterns or refers to theme colors
+        if (!match[1].includes('colors.') && !match[1].includes('theme.')) {
+          colorMatches.push({
+            file: filePath,
+            line: lineNumber + 1,
+            color: match[1],
+            context: line.trim(),
+            type: 'embedded-string',
+          });
+        }
+      });
+
       // Find quoted colors that don't match known names but might be literals
       const quotedMatches = [...(line.matchAll(QUOTED_COLOR_PATTERN) || [])];
       quotedMatches.forEach((match) => {
@@ -358,25 +408,119 @@ function processFile(filePath) {
 /**
  * Walk through a directory recursively
  */
-function walkDirectory(dir) {
+function walkDirectory(dir, excludeDirs) {
   const files = fs.readdirSync(dir);
 
   files.forEach((file) => {
     const filePath = path.join(dir, file);
     const stats = fs.statSync(filePath);
 
-    if (stats.isDirectory() && !EXCLUDE_DIRS.includes(file)) {
-      walkDirectory(filePath);
+    if (stats.isDirectory() && !excludeDirs.includes(file)) {
+      walkDirectory(filePath, excludeDirs);
     } else if (stats.isFile()) {
-      processFile(filePath);
+      processFile(filePath, excludeDirs);
     }
   });
 }
 
 /**
+ * Parse command line arguments
+ */
+function parseArgs() {
+  const args = {
+    directory: 'app',
+    format: 'text',
+    output: null,
+    excludeDirs: [...DEFAULT_EXCLUDE_DIRS],
+  };
+
+  // Get directory argument (first non-flag argument)
+  const dirArg = process.argv.slice(2).find((arg) => !arg.startsWith('--'));
+  if (dirArg) {
+    args.directory = dirArg;
+  }
+
+  // Parse format flag
+  const formatArg = process.argv.find((arg) => arg.startsWith('--format='));
+  if (formatArg) {
+    const format = formatArg.split('=')[1].toLowerCase();
+    if (['text', 'json'].includes(format)) {
+      args.format = format;
+    } else {
+      console.warn(`Unsupported format: ${format}. Using 'text' instead.`);
+    }
+  }
+
+  // Parse output flag
+  const outputArg = process.argv.find((arg) => arg.startsWith('--output='));
+  if (outputArg) {
+    args.output = outputArg.split('=')[1];
+  } else {
+    // Default output file name based on format
+    args.output =
+      args.format === 'json' ? 'color-report.json' : 'color-report.txt';
+  }
+
+  // Parse exclude flag
+  const excludeArg = process.argv.find((arg) => arg.startsWith('--exclude='));
+  if (excludeArg) {
+    const customExcludes = excludeArg
+      .split('=')[1]
+      .split(',')
+      .map((dir) => dir.trim());
+    if (customExcludes.length > 0) {
+      // Add custom excludes to the default ones
+      customExcludes.forEach((dir) => {
+        if (dir && !args.excludeDirs.includes(dir)) {
+          args.excludeDirs.push(dir);
+        }
+      });
+    }
+  }
+
+  return args;
+}
+
+/**
+ * Format the output as JSON
+ */
+function formatJsonOutput() {
+  // Group by file
+  const byFile = {};
+  colorMatches.forEach((match) => {
+    if (!byFile[match.file]) {
+      byFile[match.file] = [];
+    }
+    byFile[match.file].push(match);
+  });
+
+  // Create summary
+  const colorTypes = {};
+  colorMatches.forEach((match) => {
+    if (!colorTypes[match.type]) {
+      colorTypes[match.type] = 0;
+    }
+    colorTypes[match.type]++;
+  });
+
+  return {
+    summary: {
+      totalColors: colorMatches.length,
+      totalFiles: Object.keys(byFile).length,
+      colorTypes,
+    },
+    files: Object.keys(byFile).map((file) => ({
+      file,
+      count: byFile[file].length,
+      colors: byFile[file],
+    })),
+  };
+}
+
+/**
  * Format the output for better readability
  */
-function formatOutput() {
+function formatTextOutput() {
   // Group by file
   const byFile = {};
   colorMatches.forEach((match) => {
@@ -437,14 +581,22 @@ function formatOutput() {
 function main() {
   console.log('Searching for hardcoded colors...');
 
-  // Start at the app directory to avoid scanning unnecessary files
-  walkDirectory('app');
+  // Parse command line arguments
+  const args = parseArgs();
 
-  const output = formatOutput();
+  // Start at the provided directory or default to 'app'
+  walkDirectory(args.directory, args.excludeDirs);
 
-  // Write to file
-  const reportFile = 'color-report.txt';
-  fs.writeFileSync(reportFile, output);
+  // Format output based on requested format
+  let content;
+  if (args.format === 'json') {
+    content = JSON.stringify(formatJsonOutput(), null, 2);
+  } else {
+    content = formatTextOutput();
+  }
+
+  // Write to output file
+  fs.writeFileSync(args.output, content);
 
   console.log(
     `Found ${colorMatches.length} hardcoded colors in ${
@@ -456,7 +608,7 @@ function main() {
       ).length
     } files.`
   );
-  console.log(`Report saved to ${reportFile}`);
+  console.log(`Report saved to ${args.output}`);
 }
 
 main();
