@@ -11,8 +11,19 @@
     "react-native",
     "style",
     "linter",
-    "design-system"
+    "design-system",
+    "hardcoded-colors",
+    "style-audit",
+    "ui-consistency"
   ],
-  "author": "jwjames",
-  "license": "MIT"
+  "author": "Jeff James (jwjames)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwjames/find-hardcoded-colors"
+  },
+  "homepage": "https://github.com/jwjames/find-hardcoded-colors#readme",
+  "bugs": {
+    "url": "https://github.com/jwjames/find-hardcoded-colors/issues"
+  }
 }
