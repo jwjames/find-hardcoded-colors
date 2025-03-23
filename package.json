@@ -1,6 +1,6 @@
 {
   "name": "find-hardcoded-colors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool that detects hardcoded colors in codebases. Finds hex, RGB/RGBA, HSL/HSLA, named colors and embedded colors in strings with customizable output formats and exclusions.",
   "bin": {
     "find-hardcoded-colors": "./index.js"
