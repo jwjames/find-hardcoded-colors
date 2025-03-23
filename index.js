@@ -32,7 +32,8 @@ Example:
 }
 
 if (process.argv.includes('--version')) {
-  console.log('find-hardcoded-colors v1.0.1'); // or dynamically read package.json
+  const packageJson = require('./package.json');
+  console.log(`find-hardcoded-colors v${packageJson.version}`);
   process.exit(0);
 }
 
@@ -268,7 +269,18 @@ function shouldSkipFile(filePath, excludeDirs) {
   }
 
   // Skip directories we don't want to search
-  if (excludeDirs.some((dir) => filePath.includes(`/${dir}/`))) {
+  if (
+    excludeDirs.some((exclude) => {
+      // If it's a directory, check the path
+      if (filePath.includes(`/${exclude}/`)) {
+        return true;
+      }
+
+      // If it's a file, check if the filename matches
+      const filename = path.basename(filePath);
+      return filename === exclude;
+    })
+  ) {
     return true;
   }
 
@@ -611,4 +623,27 @@ function main() {
   console.log(`Report saved to ${args.output}`);
 }
 
-main();
+// When not being imported (normal CLI execution), run the main function
+if (require.main === module) {
+  main();
+}
+
+// Export patterns and functions for testing
+module.exports = {
+  HEX_COLOR_PATTERN,
+  RGB_COLOR_PATTERN,
+  RGBA_COLOR_PATTERN,
+  HSL_COLOR_PATTERN,
+  HSLA_COLOR_PATTERN,
+  COLOR_NAMES,
+  STRING_WITH_COLOR_PATTERN,
+  NAMED_COLOR_PATTERN,
+  QUOTED_COLOR_PATTERN,
+  shouldSkipFile,
+  isTextFile,
+  processFile,
+  walkDirectory,
+  parseArgs,
+  formatJsonOutput,
+  formatTextOutput,
+};

@@ -1,0 +1,602 @@
+
+Hardcoded Color Report
+=====================
+
+app/features/checkin/components/emotion/data.ts (34 colors):
+---------------------------------------------------------
+  Line 11: #FFD700 (hex)
+    color: ["#FFD700", "#FFA500"],
+
+  Line 11: #FFA500 (hex)
+    color: ["#FFD700", "#FFA500"],
+
+  Line 18: #4CAF50 (hex)
+    color: ["#4CAF50", "#81C784"],
+
+  Line 18: #81C784 (hex)
+    color: ["#4CAF50", "#81C784"],
+
+  Line 25: #9C27B0 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 25: #BA68C8 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 32: #2196F3 (hex)
+    color: ["#2196F3", "#64B5F6"],
+
+  Line 32: #64B5F6 (hex)
+    color: ["#2196F3", "#64B5F6"],
+
+  Line 39: #00BCD4 (hex)
+    color: ["#00BCD4", "#4DD0E1"],
+
+  Line 39: #4DD0E1 (hex)
+    color: ["#00BCD4", "#4DD0E1"],
+
+  Line 46: #FF9800 (hex)
+    color: ["#FF9800", "#FFB74D"],
+
+  Line 46: #FFB74D (hex)
+    color: ["#FF9800", "#FFB74D"],
+
+  Line 53: #F06292 (hex)
+    color: ["#F06292", "#EC407A"],
+
+  Line 53: #EC407A (hex)
+    color: ["#F06292", "#EC407A"],
+
+  Line 60: #4CAF50 (hex)
+    color: ["#4CAF50", "#81C784"],
+
+  Line 60: #81C784 (hex)
+    color: ["#4CAF50", "#81C784"],
+
+  Line 69: #F44336 (hex)
+    color: ["#F44336", "#E57373"],
+
+  Line 69: #E57373 (hex)
+    color: ["#F44336", "#E57373"],
+
+  Line 76: #3F51B5 (hex)
+    color: ["#3F51B5", "#7986CB"],
+
+  Line 76: #7986CB (hex)
+    color: ["#3F51B5", "#7986CB"],
+
+  Line 83: #FF5722 (hex)
+    color: ["#FF5722", "#FF8A65"],
+
+  Line 83: #FF8A65 (hex)
+    color: ["#FF5722", "#FF8A65"],
+
+  Line 90: #9C27B0 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 90: #BA68C8 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 97: #607D8B (hex)
+    color: ["#607D8B", "#90A4AE"],
+
+  Line 97: #90A4AE (hex)
+    color: ["#607D8B", "#90A4AE"],
+
+  Line 104: #9C27B0 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 104: #BA68C8 (hex)
+    color: ["#9C27B0", "#BA68C8"],
+
+  Line 111: #F44336 (hex)
+    color: ["#F44336", "#E57373"],
+
+  Line 111: #E57373 (hex)
+    color: ["#F44336", "#E57373"],
+
+  Line 118: #FFD600 (hex)
+    color: ["#FFD600", "#FFC107"],
+
+  Line 118: #FFC107 (hex)
+    color: ["#FFD600", "#FFC107"],
+
+  Line 125: #FFC107 (hex)
+    color: ["#FFC107", "#FFD54F"],
+
+  Line 125: #FFD54F (hex)
+    color: ["#FFC107", "#FFD54F"],
+
+
+app/components/common/selectors/MoodSelector.tsx (25 colors):
+----------------------------------------------------------
+  Line 80: #FFB75E (hex)
+    return ["#FFB75E", "#ED8F03"]
+
+  Line 80: #ED8F03 (hex)
+    return ["#FFB75E", "#ED8F03"]
+
+  Line 82: #606c88 (hex)
+    return ["#606c88", "#3f4c6b"]
+
+  Line 82: #3f4c6b (hex)
+    return ["#606c88", "#3f4c6b"]
+
+  Line 84: #ff6e7f (hex)
+    return ["#ff6e7f", "#bfe9ff"]
+
+  Line 84: #bfe9ff (hex)
+    return ["#ff6e7f", "#bfe9ff"]
+
+  Line 86: #2193b0 (hex)
+    return ["#2193b0", "#6dd5ed"]
+
+  Line 86: #6dd5ed (hex)
+    return ["#2193b0", "#6dd5ed"]
+
+  Line 88: #56ab2f (hex)
+    return ["#56ab2f", "#a8e063"]
+
+  Line 88: #a8e063 (hex)
+    return ["#56ab2f", "#a8e063"]
+
+  Line 90: #cb356b (hex)
+    return ["#cb356b", "#bd3f32"]
+
+  Line 90: #bd3f32 (hex)
+    return ["#cb356b", "#bd3f32"]
+
+  Line 92: #1fa2ff (hex)
+    return ["#1fa2ff", "#12d8fa"]
+
+  Line 92: #12d8fa (hex)
+    return ["#1fa2ff", "#12d8fa"]
+
+  Line 94: #8e9eab (hex)
+    return ["#8e9eab", "#eef2f3"]
+
+  Line 94: #eef2f3 (hex)
+    return ["#8e9eab", "#eef2f3"]
+
+  Line 96: #f83600 (hex)
+    return ["#f83600", "#f9d423"]
+
+  Line 96: #f9d423 (hex)
+    return ["#f83600", "#f9d423"]
+
+  Line 98: #4b6cb7 (hex)
+    return ["#4b6cb7", "#182848"]
+
+  Line 98: #182848 (hex)
+    return ["#4b6cb7", "#182848"]
+
+  Line 100: #6441A5 (hex)
+    return ["#6441A5", "#2a0845"]
+
+  Line 100: #2a0845 (hex)
+    return ["#6441A5", "#2a0845"]
+
+  Line 102: #757F9A (hex)
+    return ["#757F9A", "#D7DDE8"]
+
+  Line 102: #D7DDE8 (hex)
+    return ["#757F9A", "#D7DDE8"]
+
+  Line 154: #000 (hex)
+    shadowColor: "#000",
+
+
+app/screens/HistoryScreen.tsx (24 colors):
+---------------------------------------
+  Line 79: #1A1A1A (hex)
+    backgroundColor: isDark ? "#1A1A1A" : theme.colors.card,
+
+  Line 80: #000000 (hex)
+    shadowColor: isDark ? "#000000" : "#333333",
+
+  Line 80: #333333 (hex)
+    shadowColor: isDark ? "#000000" : "#333333",
+
+  Line 83: #222222 (hex)
+    backgroundColor: isDark ? "#222222" : "#F0F0F0",
+
+  Line 83: #F0F0F0 (hex)
+    backgroundColor: isDark ? "#222222" : "#F0F0F0",
+
+  Line 86: #333333 (hex)
+    borderTopColor: isDark ? "#333333" : "#DDDDDD",
+
+  Line 86: #DDDDDD (hex)
+    borderTopColor: isDark ? "#333333" : "#DDDDDD",
+
+  Line 89: #333333 (hex)
+    backgroundColor: isDark ? "#333333" : "#E0E0E0",
+
+  Line 89: #E0E0E0 (hex)
+    backgroundColor: isDark ? "#333333" : "#E0E0E0",
+
+  Line 92: #2A3A4A (hex)
+    backgroundColor: isDark ? "#2A3A4A" : "#E6F7FF",
+
+  Line 92: #E6F7FF (hex)
+    backgroundColor: isDark ? "#2A3A4A" : "#E6F7FF",
+
+  Line 93: #4080C0 (hex)
+    borderColor: isDark ? "#4080C0" : theme.colors.primary,
+
+  Line 97: #FFFFFF (hex)
+    color: isDark ? "#FFFFFF" : "#000000",
+
+  Line 97: #000000 (hex)
+    color: isDark ? "#FFFFFF" : "#000000",
+
+  Line 100: #CCCCCC (hex)
+    color: isDark ? "#CCCCCC" : "#666666",
+
+  Line 100: #666666 (hex)
+    color: isDark ? "#CCCCCC" : "#666666",
+
+  Line 103: #90CAF9 (hex)
+    color: isDark ? "#90CAF9" : "#1976D2",
+
+  Line 103: #1976D2 (hex)
+    color: isDark ? "#90CAF9" : "#1976D2",
+
+  Line 106: #AAAAAA (hex)
+    color: isDark ? "#AAAAAA" : "#888888",
+
+  Line 106: #888888 (hex)
+    color: isDark ? "#AAAAAA" : "#888888",
+
+  Line 673: #6C63FF (hex)
+    borderLeftColor: "#6C63FF", // Purple accent
+
+  Line 678: #4080C0 (hex)
+    borderLeftColor: "#4080C0", // Blue accent
+
+  Line 843: white (named)
+    borderColor: "white",
+
+  Line 847: white (named)
+    color: "white",
+
+
+app/screens/TrackDoseScreen.tsx (11 colors):
+-----------------------------------------
+  Line 258: #1A1A1A (hex)
+    const reflectionContainerBgColor = theme.dark ? "#1A1A1A" : "#F5F5F5"
+
+  Line 258: #F5F5F5 (hex)
+    const reflectionContainerBgColor = theme.dark ? "#1A1A1A" : "#F5F5F5"
+
+  Line 316: #444444 (hex)
+    trackColor={{ false: theme.dark ? "#444444" : "#CCCCCC", true: theme.colors.primary }}
+
+  Line 316: #CCCCCC (hex)
+    trackColor={{ false: theme.dark ? "#444444" : "#CCCCCC", true: theme.colors.primary }}
+
+  Line 318: #888888 (hex)
+    enableReflectionPrompt ? theme.colors.card : theme.dark ? "#888888" : "#FFFFFF"
+
+  Line 318: #FFFFFF (hex)
+    enableReflectionPrompt ? theme.colors.card : theme.dark ? "#888888" : "#FFFFFF"
+
+  Line 499: #E0E0E0 (hex)
+    backgroundColor: "#E0E0E0", // A light gray that works in both themes
+
+  Line 506: #C0C0C0 (hex)
+    backgroundColor: "#C0C0C0", // A darker gray for pressed state
+
+  Line 520: #FFFFFF (hex)
+    color: "#FFFFFF", // White text for contrast
+
+  Line 545: #E0E0E0 (hex)
+    backgroundColor: "#E0E0E0", // Same light gray as time buttons
+
+  Line 552: #C0C0C0 (hex)
+    backgroundColor: "#C0C0C0", // Same darker gray for pressed state
+
+
+app/features/checkin/styles/shared-selector.styles.ts (10 colors):
+---------------------------------------------------------------
+  Line 16: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 21: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 42: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 52: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 58: white (named)
+    backgroundColor: "white",
+
+  Line 81: rgba(0, 128, 255, 0.1) (rgba)
+    backgroundColor: "rgba(0, 128, 255, 0.1)",
+
+  Line 85: rgba(0, 128, 255, 0.2) (rgba)
+    backgroundColor: "rgba(0, 128, 255, 0.2)",
+
+  Line 94: white (named)
+    backgroundColor: "white",
+
+  Line 104: rgba(0, 128, 255, 0.1) (rgba)
+    backgroundColor: colors.palette.primary100 || "rgba(0, 128, 255, 0.1)",
+
+  Line 144: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/components/StepIndicator.test.tsx (7 colors):
+-----------------------------------------------
+  Line 26: #E1E1E1 (hex)
+    neutral300: "#E1E1E1",
+
+  Line 27: #007AFF (hex)
+    primary500: "#007AFF",
+
+  Line 28: #5856D6 (hex)
+    secondary500: "#5856D6",
+
+  Line 193: #404040 (hex)
+    neutral300: "#404040",
+
+  Line 194: #0A84FF (hex)
+    primary500: "#0A84FF",
+
+  Line 195: #5E5CE6 (hex)
+    secondary500: "#5E5CE6",
+
+  Line 230: #E1E1E1 (hex)
+    neutral300: "#E1E1E1",
+
+
+app/components/common/Toast/types.ts (4 colors):
+----------------------------------------------
+  Line 9: #007AFF (hex)
+    backgroundColor: "#007AFF",
+
+  Line 12: #34C759 (hex)
+    backgroundColor: "#34C759",
+
+  Line 15: #FF9500 (hex)
+    backgroundColor: "#FF9500",
+
+  Line 18: #FF3B30 (hex)
+    backgroundColor: "#FF3B30",
+
+
+app/features/checkin/flows/WithdrawalFlow/withdrawalFlow.styles.ts (4 colors):
+----------------------------------------------------------------------------
+  Line 14: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 22: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 30: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 35: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/components/common/ScreenContent/styles.ts (3 colors):
+-------------------------------------------------------
+  Line 22: transparent (unknown)
+    backgroundColor: "transparent", // Allow app background to show through for consistent UI
+
+  Line 27: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 38: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/styles/shared-flow.styles.ts (3 colors):
+-----------------------------------------------------------
+  Line 14: transparent (unknown)
+    backgroundColor: "transparent", // Transparent to prevent nested white backgrounds
+
+  Line 22: transparent (unknown)
+    backgroundColor: "transparent", // Transparent to prevent nested white backgrounds
+
+  Line 56: transparent (unknown)
+    backgroundColor: "transparent", // Transparent to allow app background to show through
+
+
+app/navigators/TabNavigator.tsx (3 colors):
+-----------------------------------------
+  Line 32: #000 (hex)
+    tabBarActiveTintColor: "#000",
+
+  Line 33: #666 (hex)
+    tabBarInactiveTintColor: "#666",
+
+  Line 37: #000 (hex)
+    shadowColor: "#000",
+
+
+app/screens/ChartsScreen.tsx (3 colors):
+--------------------------------------
+  Line 45: #fff (hex)
+    backgroundColor: "#fff",
+
+  Line 46: #fff (hex)
+    backgroundGradientFrom: "#fff",
+
+  Line 47: #fff (hex)
+    backgroundGradientTo: "#fff",
+
+
+app/components/common/AppHeader/AppHeader.tsx (2 colors):
+-------------------------------------------------------
+  Line 219: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 228: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/components/common/BackHeader/BackHeader.tsx (2 colors):
+---------------------------------------------------------
+  Line 46: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 52: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/components/withdrawal/styles.ts (2 colors):
+--------------------------------------------------------------
+  Line 37: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 53: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/flows/MoodFlow/moodFlow.styles.ts (2 colors):
+----------------------------------------------------------------
+  Line 9: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 13: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/common/StandardFlowContainer.tsx (2 colors):
+-------------------------------------------------------
+  Line 11: transparent (unknown)
+    backgroundColor: "transparent", // Transparent background to avoid nested white containers
+
+  Line 15: transparent (unknown)
+    backgroundColor: "transparent", // Transparent background to avoid nested white containers
+
+
+app/screens/TrackFeelingScreen.tsx (2 colors):
+--------------------------------------------
+  Line 38: #1A2A3A (hex)
+    backgroundColor: theme.dark ? "#1A2A3A" : "#E6F0F9",
+
+  Line 38: #E6F0F9 (hex)
+    backgroundColor: theme.dark ? "#1A2A3A" : "#E6F0F9",
+
+
+app/scripts/README.md (2 colors):
+-------------------------------
+  Line 94: #FFFFFF (hex)
+    1. Find all hardcoded hex colors (e.g., #FFFFFF, #000)
+
+  Line 94: #000 (hex)
+    1. Find all hardcoded hex colors (e.g., #FFFFFF, #000)
+
+
+app/scripts/find-hardcoded-colors.js (2 colors):
+----------------------------------------------
+  Line 7: #FFF (hex)
+    * - Hex colors (#FFF, #FFFFFF, etc.)
+
+  Line 7: #FFFFFF (hex)
+    * - Hex colors (#FFF, #FFFFFF, etc.)
+
+
+app/theme/styles/buttons.styles.ts (2 colors):
+--------------------------------------------
+  Line 66: transparent (unknown)
+    backgroundColor: "transparent",
+
+  Line 71: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/components/common/selectors/ReasonSelector.tsx (1 colors):
+------------------------------------------------------------
+  Line 44: transparent (unknown)
+    borderColor: "transparent",
+
+
+app/features/checkin/components/CheckInContainer.tsx (1 colors):
+--------------------------------------------------------------
+  Line 33: red (named)
+    color: "red",
+
+
+app/features/checkin/components/OptionCard/styles.ts (1 colors):
+--------------------------------------------------------------
+  Line 11: #000 (hex)
+    shadowColor: "#000",
+
+
+app/features/checkin/components/common/FlowContainer/FlowContainer.tsx (1 colors):
+--------------------------------------------------------------------------------
+  Line 16: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/components/craving/styles.ts (1 colors):
+-----------------------------------------------------------
+  Line 55: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/components/emotion/emotionSelector.styles.ts (1 colors):
+---------------------------------------------------------------------------
+  Line 64: white (named)
+    color: "white", // Ensure text is visible on colored emotion buttons
+
+
+app/features/checkin/components/sideEffects/styles.ts (1 colors):
+---------------------------------------------------------------
+  Line 54: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/flows/ModernCravingFlow/ModernCravingFlow.tsx (1 colors):
+----------------------------------------------------------------------------
+  Line 205: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/flows/ModernMoodFlow/ModernMoodFlow.tsx (1 colors):
+----------------------------------------------------------------------
+  Line 120: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/flows/ModernSideEffectsFlow/ModernSideEffectsFlow.tsx (1 colors):
+------------------------------------------------------------------------------------
+  Line 207: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/checkin/flows/ModernWithdrawalFlow/ModernWithdrawalFlow.tsx (1 colors):
+----------------------------------------------------------------------------------
+  Line 206: transparent (unknown)
+    backgroundColor: "transparent",
+
+
+app/features/dose/components/substanceInput/styles.ts (1 colors):
+---------------------------------------------------------------
+  Line 80: rgba(0, 0, 0, 0.5) (rgba)
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+
+
+app/services/notifications/utils.ts (1 colors):
+---------------------------------------------
+  Line 34: #FF231F7C (hex)
+    lightColor: "#FF231F7C",
+
+
+Summary
+-------
+Total hardcoded colors found: 162
+Files with hardcoded colors: 34
+
+Color types:
+  hex: 117
+  unknown: 35
+  named: 6
+  rgba: 4

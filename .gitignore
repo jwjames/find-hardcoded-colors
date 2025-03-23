@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Testing
+coverage/
+.nyc_output/
+tests/temp-output.json
+
+# Build outputs
+dist/
+build/
+
+# Runtime data
+color-report.txt
+color-report.json
+*.log
+*.json.report
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store 

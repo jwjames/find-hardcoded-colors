@@ -1,0 +1,47 @@
+/* Sample CSS file with various color formats */
+
+.hex-colors {
+  color: #f00;
+  background-color: #ff0000;
+  border-color: #ff0000ff;
+}
+
+.rgb-colors {
+  color: rgb(255, 0, 0);
+  background-color: rgb(0, 255, 0);
+  border: 1px solid rgb(0, 0, 255);
+}
+
+.rgba-colors {
+  color: rgba(255, 0, 0, 1);
+  background-color: rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+}
+
+.hsl-colors {
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(120, 100%, 50%);
+}
+
+.hsla-colors {
+  color: hsla(240, 100%, 50%, 1);
+  background-color: hsla(60, 100%, 50%, 0.5);
+}
+
+.named-colors {
+  color: red;
+  background-color: blue;
+  border-color: green;
+}
+
+.embedded-colors {
+  border: 1px solid black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, red, blue);
+}
+
+/* Theme variables - should be ignored */
+.theme-colors {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}

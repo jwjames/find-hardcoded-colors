@@ -1,0 +1,394 @@
+{
+  "summary": {
+    "totalColors": 52,
+    "totalFiles": 2,
+    "colorTypes": {
+      "hex": 7,
+      "rgb": 5,
+      "rgba": 7,
+      "hsl": 4,
+      "hsla": 4,
+      "embedded-string": 20,
+      "named": 3,
+      "unknown": 2
+    }
+  },
+  "files": [
+    {
+      "file": "tests/fixtures/sample.css",
+      "count": 14,
+      "colors": [
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 4,
+          "color": "#f00",
+          "context": "color: #f00;",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 5,
+          "color": "#ff0000",
+          "context": "background-color: #ff0000;",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 6,
+          "color": "#ff0000ff",
+          "context": "border-color: #ff0000ff;",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 10,
+          "color": "rgb(255, 0, 0)",
+          "context": "color: rgb(255, 0, 0);",
+          "type": "rgb"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 11,
+          "color": "rgb(0, 255, 0)",
+          "context": "background-color: rgb(0, 255, 0);",
+          "type": "rgb"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 12,
+          "color": "rgb(0, 0, 255)",
+          "context": "border: 1px solid rgb(0, 0, 255);",
+          "type": "rgb"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 16,
+          "color": "rgba(255, 0, 0, 1)",
+          "context": "color: rgba(255, 0, 0, 1);",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 17,
+          "color": "rgba(0, 255, 0, 0.5)",
+          "context": "background-color: rgba(0, 255, 0, 0.5);",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 18,
+          "color": "rgba(0, 0, 255, 0.3)",
+          "context": "box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 22,
+          "color": "hsl(0, 100%, 50%)",
+          "context": "color: hsl(0, 100%, 50%);",
+          "type": "hsl"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 23,
+          "color": "hsl(120, 100%, 50%)",
+          "context": "background-color: hsl(120, 100%, 50%);",
+          "type": "hsl"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 27,
+          "color": "hsla(240, 100%, 50%, 1)",
+          "context": "color: hsla(240, 100%, 50%, 1);",
+          "type": "hsla"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 28,
+          "color": "hsla(60, 100%, 50%, 0.5)",
+          "context": "background-color: hsla(60, 100%, 50%, 0.5);",
+          "type": "hsla"
+        },
+        {
+          "file": "tests/fixtures/sample.css",
+          "line": 39,
+          "color": "rgba(0, 0, 0, 0.5)",
+          "context": "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);",
+          "type": "rgba"
+        }
+      ]
+    },
+    {
+      "file": "tests/fixtures/sample.js",
+      "count": 38,
+      "colors": [
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 4,
+          "color": "#FFF",
+          "context": "const hexColor1 = '#FFF';",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 4,
+          "color": "#FFF",
+          "context": "const hexColor1 = '#FFF';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 5,
+          "color": "#FFFFFF",
+          "context": "const hexColor2 = '#FFFFFF';",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 5,
+          "color": "#FFFFFF",
+          "context": "const hexColor2 = '#FFFFFF';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 6,
+          "color": "#FF0000",
+          "context": "const hexColor3 = '#FF0000';",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 6,
+          "color": "#FF0000",
+          "context": "const hexColor3 = '#FF0000';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 7,
+          "color": "#FF000080",
+          "context": "const hexColor4 = '#FF000080'; // With alpha",
+          "type": "hex"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 7,
+          "color": "#FF000080",
+          "context": "const hexColor4 = '#FF000080'; // With alpha",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 10,
+          "color": "rgb(255, 0, 0)",
+          "context": "const rgbColor1 = 'rgb(255, 0, 0)';",
+          "type": "rgb"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 10,
+          "color": "rgb(255, 0, 0)",
+          "context": "const rgbColor1 = 'rgb(255, 0, 0)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 11,
+          "color": "rgb(0, 255, 0)",
+          "context": "const rgbColor2 = 'rgb(0, 255, 0)';",
+          "type": "rgb"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 11,
+          "color": "rgb(0, 255, 0)",
+          "context": "const rgbColor2 = 'rgb(0, 255, 0)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 12,
+          "color": "rgba(0, 0, 255, 0.5)",
+          "context": "const rgbaColor1 = 'rgba(0, 0, 255, 0.5)';",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 12,
+          "color": "rgba(0, 0, 255, 0.5)",
+          "context": "const rgbaColor1 = 'rgba(0, 0, 255, 0.5)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 13,
+          "color": "rgba(255, 255, 255, 1)",
+          "context": "const rgbaColor2 = 'rgba(255, 255, 255, 1)';",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 13,
+          "color": "rgba(255, 255, 255, 1)",
+          "context": "const rgbaColor2 = 'rgba(255, 255, 255, 1)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 16,
+          "color": "hsl(0, 100%, 50%)",
+          "context": "const hslColor1 = 'hsl(0, 100%, 50%)';",
+          "type": "hsl"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 16,
+          "color": "hsl(0, 100%, 50%)",
+          "context": "const hslColor1 = 'hsl(0, 100%, 50%)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 17,
+          "color": "hsl(120, 100%, 50%)",
+          "context": "const hslColor2 = 'hsl(120, 100%, 50%)';",
+          "type": "hsl"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 17,
+          "color": "hsl(120, 100%, 50%)",
+          "context": "const hslColor2 = 'hsl(120, 100%, 50%)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 18,
+          "color": "hsla(240, 100%, 50%, 0.5)",
+          "context": "const hslaColor1 = 'hsla(240, 100%, 50%, 0.5)';",
+          "type": "hsla"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 18,
+          "color": "hsla(240, 100%, 50%, 0.5)",
+          "context": "const hslaColor1 = 'hsla(240, 100%, 50%, 0.5)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 19,
+          "color": "hsla(180, 50%, 50%, 1)",
+          "context": "const hslaColor2 = 'hsla(180, 50%, 50%, 1)';",
+          "type": "hsla"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 19,
+          "color": "hsla(180, 50%, 50%, 1)",
+          "context": "const hslaColor2 = 'hsla(180, 50%, 50%, 1)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 23,
+          "color": "red",
+          "context": "color: 'red',",
+          "type": "named"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 23,
+          "color": "red",
+          "context": "color: 'red',",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 24,
+          "color": "blue",
+          "context": "backgroundColor: 'blue',",
+          "type": "named"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 24,
+          "color": "blue",
+          "context": "backgroundColor: 'blue',",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 25,
+          "color": "green",
+          "context": "borderColor: 'green',",
+          "type": "named"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 25,
+          "color": "green",
+          "context": "borderColor: 'green',",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 29,
+          "color": "1px solid black",
+          "context": "const border = '1px solid black';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 30,
+          "color": "rgba(0, 0, 0, 0.5)",
+          "context": "const boxShadow = '0 2px 4px rgba(0, 0, 0, 0.5)';",
+          "type": "rgba"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 30,
+          "color": "0 2px 4px rgba(0, 0, 0, 0.5)",
+          "context": "const boxShadow = '0 2px 4px rgba(0, 0, 0, 0.5)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 31,
+          "color": "linear-gradient(to right, red, blue)",
+          "context": "const gradient = 'linear-gradient(to right, red, blue)';",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 39,
+          "color": "redish",
+          "context": "color: 'redish',",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 39,
+          "color": "redish",
+          "context": "color: 'redish',",
+          "type": "unknown"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 40,
+          "color": "skyBlue",
+          "context": "backgroundColor: 'skyBlue',",
+          "type": "embedded-string"
+        },
+        {
+          "file": "tests/fixtures/sample.js",
+          "line": 40,
+          "color": "skyBlue",
+          "context": "backgroundColor: 'skyBlue',",
+          "type": "unknown"
+        }
+      ]
+    }
+  ]
+}

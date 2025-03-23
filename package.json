@@ -1,23 +1,33 @@
 {
   "name": "find-hardcoded-colors",
   "version": "1.0.3",
-  "description": "CLI tool to find hardcoded colors in React Native and JS codebases.",
+  "description": "CLI tool that detects hardcoded colors in codebases. Finds hex, RGB/RGBA, HSL/HSLA, named colors and embedded colors in strings with customizable output formats and exclusions.",
   "bin": {
-    "find-hardcoded-colors": "index.js"
+    "find-hardcoded-colors": "./index.js"
+  },
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
-    "color",
-    "theme",
-    "react-native",
-    "style",
+    "colors",
+    "hardcoded",
     "linter",
-    "design-system",
-    "hardcoded-colors",
-    "style-audit",
-    "ui-consistency"
+    "static-analysis",
+    "css",
+    "react",
+    "react-native"
   ],
-  "author": "Jeff James (jwjames)",
+  "author": "Jeff James",
   "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jwjames/find-hardcoded-colors"
