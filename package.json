@@ -1,6 +1,6 @@
 {
   "name": "find-hardcoded-colors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to find hardcoded colors in React Native and JS codebases.",
   "bin": {
     "find-hardcoded-colors": "index.js"
