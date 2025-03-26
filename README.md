@@ -196,10 +196,8 @@ Color types:
           "context": "color: [\"#FFD700\", \"#FFA500\"]",
           "type": "hex"
         }
-        // ... more colors ...
       ]
     }
-    // ... more files ...
   ]
 }
 ```
